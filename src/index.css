@@ -1,13 +1,232 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: solid black 1px;
+    gap: 10px;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-1__title {
+    color: blueviolet;
+
+}
+
+body {
+    font-family: "Gabarito", sans-serif;
+}
+
+.navbar-2 {
+    width: 60%;
+    border-radius: 30px;
+    border: solid black 1px;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-2 input {
+    border: none;
+    width: 60%;
+    font-size: 16px;
+}
+
+.navbar-2 input:focus {
+    outline: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar-3 {
+    display: flex;
+    gap: 10px;
+}
+.navbar-4{
+    display: none;
+}
+/* mylearning */
+.mylearning{
+    position: relative;
+    cursor: pointer;
+}
+.mylearning__popup{
+    background-color: white;
+    border: solid black 1px;
+    position: absolute;
+    padding: 15px;
+    margin-top: 10px;
+    display: none;
+    width: 100px;
+
+}
+.mylearning:hover .mylearning__popup{
+    display: block;
+
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: solid black 1px;
+
+}
+
+.categories p {
+    background-color: blueviolet;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: solid black 1px;
+}
+.categories p:hover{
+    background-color: transparent;
+    transition: 1s;
+    border: solid black 1px;
+}
+.sale-image{
+    position: relative;
+}
+
+.sale-image__img {
+    width: 100%;
+   
+
+}
+.sale-image__offer{
+    position: absolute;
+    background-color: white;
+    width: 40%;
+    top: 10%;
+    left: 10%;
+    border: solid black 1px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+
+   
+
+@keyframes zoom {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+
+.recommended-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.recommended {
+    padding: 10px;
+}
+
+.coursecard {
+    width: 300px;
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin: 5px;
+}
+
+.coursecard img {
+    width: 100%;
+    height: 150px;
+
+}
+
+.topics__container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.topics__container p {
+
+    padding: 10px;
+    border: solid black 1px;
+    flex-grow: 1;
+    flex-basis: 25%;
+    margin-bottom: 10px;
+
+}
+
+.popular__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.popular {
+    padding: 10px;
+}
+
+.footer__one {
+    display: flex;
+    gap: 10px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    margin: 20px;
+}
+
+.footer__two {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: center;
+}
+
+.footer__one p {
+    margin: 20px;
+}
+
+/*media queries*/
+@media screen and (max-width:800px) {
+    body{
+        font-size: 10px;
+    }
+   
+    
+}
+@media screen and (max-width:600px) {
+    .coursecard{
+        flex-basis: 40%;
+    }
+    .categories{
+        display: none;
+    }
+    .navbar-2,.navbar-3{
+        display: none;
+    }
+    .navbar-4{
+        display: block;
+    }
+    
 }
